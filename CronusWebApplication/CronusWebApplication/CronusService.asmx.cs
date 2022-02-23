@@ -25,7 +25,7 @@ namespace CronusWebApplication
         }
 
         [WebMethod]
-        public List<CRONUS_Sverige_AB_Employee> HelloWorld() 
+        public List<CRONUS_Sverige_AB_Employee> GetEmployees() 
         {
             return dataAccessLayer.GetEmployees();
         }
