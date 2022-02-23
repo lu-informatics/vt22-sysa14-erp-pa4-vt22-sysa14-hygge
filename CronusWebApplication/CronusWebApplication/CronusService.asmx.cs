@@ -17,10 +17,17 @@ namespace CronusWebApplication
     public class CronusService : System.Web.Services.WebService
     {
 
+        DataAccessLayer dataAccessLayer;
+
+        public CronusService() 
+        { 
+            dataAccessLayer = new DataAccessLayer();       
+        }
+
         [WebMethod]
-        public string HelloWorld()
+        public List<CRONUS_Sverige_AB_Employee> HelloWorld() 
         {
-            return "Hello World";
+            return dataAccessLayer.GetEmployees();
         }
     }
 }
