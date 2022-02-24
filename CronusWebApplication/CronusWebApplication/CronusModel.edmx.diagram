@@ -4,8 +4,8 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="c9f67d136cdb48e5a1d45d740e5885ba" Name="Diagram1">
-        <EntityTypeShape EntityType="CronusModel.CRONUS_Sverige_AB_Employee" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+      <Diagram DiagramId="c9f67d136cdb48e5a1d45d740e5885ba" Name="Diagram1" ZoomLevel="53">
+        <EntityTypeShape EntityType="CronusModel.CRONUS_Sverige_AB_Employee" Width="3.75" PointX="0.75" PointY="0.75" IsExpanded="true" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
