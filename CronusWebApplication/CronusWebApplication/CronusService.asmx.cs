@@ -29,5 +29,17 @@ namespace CronusWebApplication
         {
             return dataAccessLayer.GetEmployees();
         }
+
+        [WebMethod]
+        public void AddEmployee(string No_, string First_Name, string Last_Name, string Job_Title, string Address)
+        {
+            dataAccessLayer.AddEmployee(No_, First_Name, Last_Name, Job_Title, Address);
+        }
+
+        [WebMethod]
+        public CRONUS_Sverige_AB_Employee FindEmployee(string No_)
+        {
+            return dataAccessLayer.FindEmployee(No_);
+        }
     }
 }
