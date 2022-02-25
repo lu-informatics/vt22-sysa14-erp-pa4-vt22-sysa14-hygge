@@ -30,7 +30,6 @@ namespace CronusWebApplication
                cronusEntities.SaveChanges();
 
             }   
-                    
-               }
+        }
     }
 }
