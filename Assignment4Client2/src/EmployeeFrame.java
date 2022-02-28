@@ -46,11 +46,15 @@ public class EmployeeFrame extends JFrame {
 		contentPane.setLayout(null);
 		
 		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(92, 34, 378, 154);
+		scrollPane.setBounds(77, 34, 393, 181);
 		contentPane.add(scrollPane);
 		
 		table = new JTable();
 	
 		scrollPane.setViewportView(table);
+		
+		EmployeeTableModel empTableModel = new EmployeeTableModel(); 
+		
+		
 	}
 }
