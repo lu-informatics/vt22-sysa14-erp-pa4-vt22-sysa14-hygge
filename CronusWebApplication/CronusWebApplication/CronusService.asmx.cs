@@ -41,5 +41,19 @@ namespace CronusWebApplication
         {
             return dataAccessLayer.FindEmployee(No_);
         }
+
+        [WebMethod]
+        public void UpdateEmployee(string No_, string First_Name, string Last_Name, string Job_Title, string Address)
+        {
+            dataAccessLayer.UpdateEmployee(No_, First_Name, Last_Name, Job_Title, Address);
+        }
+
+        [WebMethod]
+        public void DeleteEmployee(string No_) 
+        { 
+            dataAccessLayer.DeleteEmployee(No_);
+        }
+
+        
     }
 }
