@@ -22,6 +22,12 @@ public class EmployeeTableModel extends AbstractTableModel {
 	public int getColumnCount() {
 		return columns.length; 
 	}
+	
+	@Override
+	public String getColumnName(int columnIndex) {
+		return columns[columnIndex];  
+		
+	}
 
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
@@ -36,7 +42,7 @@ public class EmployeeTableModel extends AbstractTableModel {
 		
 		}
 		
-		return ""; 
+		return null;  
 	}
 
 }
