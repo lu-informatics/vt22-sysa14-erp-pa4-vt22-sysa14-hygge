@@ -16,5 +16,10 @@ namespace EmployeeWindowsForms
         {
             InitializeComponent();
         }
+
+        private void EmployeeWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
