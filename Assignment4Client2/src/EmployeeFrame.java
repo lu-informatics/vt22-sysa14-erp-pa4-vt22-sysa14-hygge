@@ -55,6 +55,7 @@ public class EmployeeFrame extends JFrame {
 		
 		EmployeeTableModel empTableModel = new EmployeeTableModel(); 
 		
+		table.setModel(empTableModel);
 		
 	}
 }

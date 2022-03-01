@@ -25,7 +25,18 @@ public class EmployeeTableModel extends AbstractTableModel {
 
 	@Override
 	public Object getValueAt(int rowIndex, int columnIndex) {
-		return null;
+		CRONUS_Sverige_AB_Employee tmpEmployee = employees.get(rowIndex); 
+		
+		switch(columnIndex)  {
+		case 0: return tmpEmployee.getNo_(); 
+		case 1: return tmpEmployee.getFirst_Name(); 
+		case 2: return tmpEmployee.getLast_Name(); 
+		case 3: return tmpEmployee.getJob_Title();
+		case 4: return tmpEmployee.getAddress(); 
+		
+		}
+		
+		return ""; 
 	}
 
 }
