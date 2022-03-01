@@ -15,11 +15,9 @@ import java.awt.Color;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import javax.swing.JLabel;
 
 public class EmployeeFrame extends JFrame {
-
-	private JPanel contentPane;
-	private JTable table;
 
 	/**
 	 * Launch the application.
@@ -41,24 +39,40 @@ public class EmployeeFrame extends JFrame {
 	 * Create the frame.
 	 */
 	public EmployeeFrame() {
+		getContentPane().setBackground(new Color(176, 196, 222));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 573, 368);
-		contentPane = new JPanel();
-		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
-		setContentPane(contentPane);
-		contentPane.setLayout(null);
+		setBounds(100, 100, 658, 526);
+		getContentPane().setLayout(null);
+		getContentPane().setLayout(null);
 		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(77, 34, 393, 181);
-		contentPane.add(scrollPane);
+		JLabel lblNewLabel = new JLabel("No:");
+		lblNewLabel.setFont(new Font("Verdana", Font.PLAIN, 13));
+		lblNewLabel.setBounds(20, 79, 91, 14);
+		getContentPane().add(lblNewLabel);
 		
-		table = new JTable();
-	
-		scrollPane.setViewportView(table);
+		JLabel lblFirstName = new JLabel("First Name:");
+		lblFirstName.setFont(new Font("Verdana", Font.PLAIN, 13));
+		lblFirstName.setBounds(20, 105, 91, 14);
+		getContentPane().add(lblFirstName);
+		
+		JLabel lblLastName = new JLabel("Last Name:");
+		lblLastName.setFont(new Font("Verdana", Font.PLAIN, 13));
+		lblLastName.setBounds(20, 128, 91, 14);
+		getContentPane().add(lblLastName);
+		
+		JLabel lblJobTitle = new JLabel("Job Title:");
+		lblJobTitle.setFont(new Font("Verdana", Font.PLAIN, 13));
+		lblJobTitle.setBounds(20, 153, 91, 14);
+		getContentPane().add(lblJobTitle);
+		
+		JLabel lblNewLabel_3_1 = new JLabel("Address:");
+		lblNewLabel_3_1.setFont(new Font("Verdana", Font.PLAIN, 13));
+		lblNewLabel_3_1.setBounds(20, 178, 91, 14);
+		getContentPane().add(lblNewLabel_3_1);
 		
 		EmployeeTableModel empTableModel = new EmployeeTableModel(); 
 		
-		CRONUS_Sverige_AB_Employee emp1 = new CRONUS_Sverige_AB_Employee();
+		/*CRONUS_Sverige_AB_Employee emp1 = new CRONUS_Sverige_AB_Employee();
 		emp1.setNo_("KE");
 		emp1.setFirst_Name("Karin");
 		emp1.setLast_Name("Engdal");
@@ -72,9 +86,7 @@ public class EmployeeFrame extends JFrame {
 		emp2.setLast_Name("Thunström");
 		emp2.setAddress("Hallågatan 2");
 		emp2.setJob_Title("Städare");
-		empTableModel.addEmployee(emp2);
-		
-		table.setModel(empTableModel);
+		empTableModel.addEmployee(emp2);*/
 		
 	}
 }
