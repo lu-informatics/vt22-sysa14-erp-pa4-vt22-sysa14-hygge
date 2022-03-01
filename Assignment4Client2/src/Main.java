@@ -14,7 +14,7 @@ public class Main {
 			CRONUS_Sverige_AB_Employee[] employees = proxy.getEmployees();
 			
 			for(CRONUS_Sverige_AB_Employee employee : employees) {
-				
+				System.out.println(employee.getNo_()); 
 				
 			}
 			
