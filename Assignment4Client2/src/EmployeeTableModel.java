@@ -8,9 +8,14 @@ public class EmployeeTableModel extends AbstractTableModel {
 	private ArrayList<CRONUS_Sverige_AB_Employee> employees = new ArrayList<CRONUS_Sverige_AB_Employee>(); 
 	private String[] columns = { "No", "First Name", "Last Name", "Job Title", "Address" }; //Column names for the users
 	
-	public void addEmployee(CRONUS_Sverige_AB_Employee employee) 
-	{
+	public void addEmployee(CRONUS_Sverige_AB_Employee employee) {
 		employees.add(employee); 
+		this.fireTableDataChanged(); 
+	}
+	
+	public void removeEmployee(int rowIndex) {
+		employees.remove(rowIndex);
+		this.fireTableDataChanged(); 
 	}
 	
 	@Override
@@ -44,5 +49,24 @@ public class EmployeeTableModel extends AbstractTableModel {
 		
 		return null;  
 	}
-
+	public void setValueAt(Object val, int rowIndex, int columnIndex) {
+		CRONUS_Sverige_AB_Employee tmpEmployee = employees.get(rowIndex);  
+		
+		if(columnIndex == 1) {
+			String newFirstName = val.toString();
+			tmpEmployee.setFirst_Name(newFirstName);
+	
+		} else if(columnIndex == 2) {
+			String newLastName = val.toString();
+			tmpEmployee.setLast_Name(newLastName);
+		}
+		else if(columnIndex == 3) {
+			String newJobTitle = val.toString();
+			tmpEmployee.setJob_Title(newJobTitle); 
+		} 
+		else if(columnIndex == 4) {
+			String newAddress = val.toString();
+			tmpEmployee.setAddress(newAddress);
+		}
+	}
 }

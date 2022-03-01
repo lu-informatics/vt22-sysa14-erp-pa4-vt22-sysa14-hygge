@@ -16,32 +16,24 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JTextField;
+import javax.swing.JTextArea;
 
 public class EmployeeFrame extends JFrame {
 	private JTextField txtFieldNo;
 	private JTextField txtFieldFirstName;
-	private JTextField ttxtFieldLastName;
+	private JTextField txtFieldLastName;
 	private JTextField txtFieldJobTitle;
 	private JTextField txtFieldAddress;
-	private JTable JTable;
+	private JButton btnCreate; 
+	private JButton btnFind; 
+	private JButton btnUpdate; 
+	private JButton btnDelete; 
+	private JTable employeeTable;
+	private EmployeeTableModel employeeTableModel;
 	private JScrollPane scrollPane;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					EmployeeFrame frame = new EmployeeFrame();
-					frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+	private JTextArea txtAreaFindEmployee; 
 
 	/**
 	 * Create the frame.
@@ -49,7 +41,7 @@ public class EmployeeFrame extends JFrame {
 	public EmployeeFrame() {											//Bakgrund
 		getContentPane().setBackground(new Color(173, 216, 230));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 658, 526);
+		setBounds(100, 100, 825, 526);
 		getContentPane().setLayout(null);
 		getContentPane().setLayout(null);
 		
@@ -60,7 +52,7 @@ public class EmployeeFrame extends JFrame {
 		
 		JLabel lblFirstName = new JLabel("First Name:");				//Lable First Name
 		lblFirstName.setFont(new Font("Verdana", Font.PLAIN, 13));
-		lblFirstName.setBounds(20, 126, 91, 14);
+		lblFirstName.setBounds(20, 122, 91, 14);
 		getContentPane().add(lblFirstName);
 		
 		JLabel lblLastName = new JLabel("Last Name:");					//Lable Last Name
@@ -90,11 +82,11 @@ public class EmployeeFrame extends JFrame {
 		txtFieldFirstName.setBounds(109, 120, 129, 20);
 		getContentPane().add(txtFieldFirstName);
 		
-		ttxtFieldLastName = new JTextField();								//txtfield last name
-		ttxtFieldLastName.setFont(new Font("Verdana", Font.PLAIN, 12));
-		ttxtFieldLastName.setColumns(10);
-		ttxtFieldLastName.setBounds(109, 161, 129, 20);
-		getContentPane().add(ttxtFieldLastName);
+		txtFieldLastName = new JTextField();								//txtfield last name
+		txtFieldLastName.setFont(new Font("Verdana", Font.PLAIN, 12));
+		txtFieldLastName.setColumns(10);
+		txtFieldLastName.setBounds(109, 161, 129, 20);
+		getContentPane().add(txtFieldLastName);
 		
 		txtFieldJobTitle = new JTextField();								//txtfield job title
 		txtFieldJobTitle.setFont(new Font("Verdana", Font.PLAIN, 12));
@@ -109,51 +101,108 @@ public class EmployeeFrame extends JFrame {
 		getContentPane().add(txtFieldAddress);
 		
 		scrollPane = new JScrollPane();
-		scrollPane.setBounds(266, 79, 366, 397);
+		scrollPane.setBounds(275, 79, 524, 176);
 		getContentPane().add(scrollPane);
 		
-		JTable = new JTable();												//JTABLE
-		JTable.setBackground(new Color(240, 248, 255));
-		scrollPane.setViewportView(JTable);
-		JTable.setFont(new Font("Tahoma", Font.PLAIN, 12));
+		employeeTable = new JTable();												//JTABLE
+		employeeTable.setBackground(new Color(240, 248, 255));
+		scrollPane.setViewportView(employeeTable);
+		employeeTable.setFont(new Font("Tahoma", Font.PLAIN, 12));
 		
-		JButton btnCreate = new JButton("Create");						//btb Create
+		btnCreate = new JButton("Create");						//btb Create
 		btnCreate.setFont(new Font("Verdana", Font.PLAIN, 12));
-		btnCreate.setBounds(22, 304, 89, 23);
+		btnCreate.setBounds(20, 298, 89, 23);
+		btnCreate.setToolTipText("Enter values for No, First Name, Last Name, Job Title and Address and then press this button to add a record of a new employee.");
 		getContentPane().add(btnCreate);
 		
-		JButton btnRead = new JButton("Read");							//btb Read
-		btnRead.setFont(new Font("Verdana", Font.PLAIN, 12));
-		btnRead.setBounds(149, 304, 89, 23);
-		getContentPane().add(btnRead);
+		btnFind = new JButton("Find");							//btb Read
+		btnFind.setFont(new Font("Verdana", Font.PLAIN, 12));
+		btnFind.setBounds(147, 342, 91, 23);
+		btnFind.setToolTipText("Enter a No in the No field to retrieve information about an employee.");
+		getContentPane().add(btnFind);
 		
-		JButton btbUpdate = new JButton("Update");						//btb Update
-		btbUpdate.setFont(new Font("Verdana", Font.PLAIN, 12));
-		btbUpdate.setBounds(22, 355, 89, 23);
-		getContentPane().add(btbUpdate);
+		btnUpdate = new JButton("Update");						//btb Update
+		btnUpdate.setFont(new Font("Verdana", Font.PLAIN, 12));
+		btnUpdate.setBounds(149, 298, 89, 23);
+		btnUpdate.setToolTipText("Select a row and enter fields to be updated.");
+		getContentPane().add(btnUpdate);
 		
-		JButton btbDelete = new JButton("Delete");						//btb Delete
-		btbDelete.setFont(new Font("Verdana", Font.PLAIN, 12));
-		btbDelete.setBounds(149, 355, 89, 23); 
-		getContentPane().add(btbDelete);
+		btnDelete = new JButton("Delete");						//btb Delete
+		btnDelete.setFont(new Font("Verdana", Font.PLAIN, 12));
+		btnDelete.setBounds(20, 342, 89, 23); 
+		btnDelete.setToolTipText("Select a row to be deleted.");
+		getContentPane().add(btnDelete);
 		
-		EmployeeTableModel empTableModel = new EmployeeTableModel(); 
+		employeeTableModel = new EmployeeTableModel(); 
+		employeeTable.setModel(employeeTableModel);
 		
-		/*CRONUS_Sverige_AB_Employee emp1 = new CRONUS_Sverige_AB_Employee();
-		emp1.setNo_("KE");
-		emp1.setFirst_Name("Karin");
-		emp1.setLast_Name("Engdal");
-		emp1.setAddress("Hejgatan 1");
-		emp1.setJob_Title("Programmerare");
-		empTableModel.addEmployee(emp1);
+		txtAreaFindEmployee = new JTextArea();
+		txtAreaFindEmployee.setEditable(false);
+		txtAreaFindEmployee.setBounds(275, 300, 524, 111); 
+		txtAreaFindEmployee.setBackground(new Color(240, 240, 240));
+		getContentPane().add(txtAreaFindEmployee);
 		
-		CRONUS_Sverige_AB_Employee emp2 = new CRONUS_Sverige_AB_Employee();
-		emp2.setNo_("HT");
-		emp2.setFirst_Name("Hannes");
-		emp2.setLast_Name("Thunström");
-		emp2.setAddress("Hallågatan 2");
-		emp2.setJob_Title("Städare");
-		empTableModel.addEmployee(emp2);*/
-		
+		this.setVisible(true);	
 	}
+	
+	public void clearTextFields() {
+		txtFieldNo.setText("");
+		txtFieldFirstName.setText("");
+		txtFieldLastName.setText("");
+		txtFieldJobTitle.setText("");
+		txtFieldAddress.setText("");
+	}
+	
+	public void displayErrorMessage(String message) {
+		JOptionPane.showMessageDialog(this, message);
+	}
+	
+	public JTextField getTxtFieldNo() {
+		return txtFieldNo;
+	}
+
+	public JTextField getTxtFieldFirstName() {
+		return txtFieldFirstName;
+	}
+
+	public JTextField getTxtFieldLastName() {
+		return txtFieldLastName;
+	}
+
+	public JTextField getTxtFieldJobTitle() {
+		return txtFieldJobTitle;
+	}
+
+	public JTextField getTxtFieldAddress() {
+		return txtFieldAddress;
+	}
+
+	public JButton getBtnCreate() {
+		return btnCreate;
+	}
+
+	public JButton getBtnFind() {
+		return btnFind;
+	}
+
+	public JButton getBtnUpdate() {
+		return btnUpdate;
+	}
+
+	public JButton getBtnDelete() {
+		return btnDelete;
+	}
+
+	public JTable getEmployeeTable() {
+		return employeeTable;
+	}
+	
+	public EmployeeTableModel getEmployeeTableModel() {
+		return employeeTableModel;
+	}
+
+	public JTextArea getTxtAreaFindEmployee() {
+		return txtAreaFindEmployee;
+	}
+	
 }

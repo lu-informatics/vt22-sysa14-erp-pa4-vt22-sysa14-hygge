@@ -9,7 +9,7 @@ namespace CronusWebApplication
     public class DataAccessLayer
     {
         //FIND EMPLOYEE
-        public CRONUS_Sverige_AB_Employee FindEmployee(string No_)  //LOOK UP LINE 97
+        public CRONUS_Sverige_AB_Employee FindEmployee(string No_) 
         {
             using (CronusEntities cronusEntities = new CronusEntities())
             {
@@ -97,14 +97,6 @@ namespace CronusWebApplication
 
             {
                 CRONUS_Sverige_AB_Employee tmpEmployee = cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == No_).First();
-                /*cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == No_).First();*/
-                /*CRONUS_Sverige_AB_Employee tmpEmployee = this.FindEmployee(xxx);*/
-                /*cronusEntities.CRONUS_Sverige_AB_Employee.Attach(tmpEmployee);
-                tmpEmployee.No_ = No_;
-                tmpEmployee.First_Name = First_Name;
-                tmpEmployee.Last_Name = Last_Name;
-                tmpEmployee.Job_Title = Job_Title;
-                tmpEmployee.Address = Address;*/
 
                 if (tmpEmployee != null)
                 {
@@ -145,8 +137,7 @@ namespace CronusWebApplication
             using (CronusEntities cronusEntities = new CronusEntities())
             {
 
-                CRONUS_Sverige_AB_Employee tmpEmployee = this.FindEmployee(No_);
-                /*cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == No_).First();*/
+                CRONUS_Sverige_AB_Employee tmpEmployee = this.FindEmployee(No_);               
 
                 cronusEntities.CRONUS_Sverige_AB_Employee.Attach(tmpEmployee);
 
