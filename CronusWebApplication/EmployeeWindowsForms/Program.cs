@@ -16,7 +16,7 @@ namespace EmployeeWindowsForms
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new EmployeeWindowsForm());
+            Application.Run(new EmployeeWindow());
         }
     }
 }

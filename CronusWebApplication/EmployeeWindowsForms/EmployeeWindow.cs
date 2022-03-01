@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EmployeeWindowsForms
 {
-    public partial class EmployeeWindowsForm : Form
+    public partial class EmployeeWindow : Form
     {
-        public EmployeeWindowsForm()
+        public EmployeeWindow()
         {
             InitializeComponent();
         }
