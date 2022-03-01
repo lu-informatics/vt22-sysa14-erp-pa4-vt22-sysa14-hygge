@@ -1,5 +1,4 @@
 import java.rmi.RemoteException;
-
 import org.tempuri.CRONUS_Sverige_AB_Employee;
 import org.tempuri.CronusServiceSoap;
 import org.tempuri.CronusServiceSoapProxy;
