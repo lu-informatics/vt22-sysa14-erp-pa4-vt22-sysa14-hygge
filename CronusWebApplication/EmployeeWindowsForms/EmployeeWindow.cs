@@ -134,11 +134,11 @@ namespace EmployeeWindowsForms
         {
             try
             {
-                txtBoxFindEmployee.Clear();
-                string No = txtBoxNo.Text;
-                CRONUS_Sverige_AB_Employee employee = proxy.FindEmployee(No);
-                txtBoxFindEmployee.AppendText("No: " + employee.No_ + Environment.NewLine);
-                txtBoxFindEmployee.AppendText("First name: " + employee.First_Name + Environment.NewLine);
+                txtBoxFindEmployee.Clear(); //Clear the field with information about an employee
+                string No = txtBoxNo.Text;  //Gets No from textbox
+                CRONUS_Sverige_AB_Employee employee = proxy.FindEmployee(No);   //Find employee from database
+                txtBoxFindEmployee.AppendText("No: " + employee.No_ + Environment.NewLine);    //Show information about an employee
+                txtBoxFindEmployee.AppendText("First name: " + employee.First_Name + Environment.NewLine); 
                 txtBoxFindEmployee.AppendText("Last Name: " + employee.Last_Name + Environment.NewLine);
                 txtBoxFindEmployee.AppendText("Job Title: " + employee.Job_Title + Environment.NewLine);
                 txtBoxFindEmployee.AppendText("Address: " + employee.Address + Environment.NewLine);
