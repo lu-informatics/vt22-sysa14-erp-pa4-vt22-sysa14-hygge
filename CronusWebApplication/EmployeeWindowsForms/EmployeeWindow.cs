@@ -17,12 +17,12 @@ namespace EmployeeWindowsForms
 
         public EmployeeWindow()
         {
-            InitializeComponent();
+            InitializeComponent(); 
             proxy = new CronusServiceSoapClient();
 
             // Add current employees to the data grid
-            CRONUS_Sverige_AB_Employee[] employees = proxy.GetEmployees();
-            foreach (CRONUS_Sverige_AB_Employee employee in employees)
+            CRONUS_Sverige_AB_Employee[] employees = proxy.GetEmployees();  //Array containing Cronus employees fetched from database
+            foreach (CRONUS_Sverige_AB_Employee employee in employees)      //For each employee in the Array, add employee to the gridView
             {
                 dataGridViewEmployee.Rows.Add(employee.No_, employee.First_Name, employee.Last_Name, employee.Job_Title, employee.Address);
             }
@@ -30,25 +30,25 @@ namespace EmployeeWindowsForms
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            string No = txtBoxNo.Text;
+            string No = txtBoxNo.Text;                      //Gets the values from the textBoxes
             string FirstName = txtBoxFirstName.Text;
             string LastName = txtBoxLastName.Text;
             string JobTitle = txtBoxJobTitle.Text;
             string Address = txtBoxAddress.Text; 
 
-            if (No.Equals("") || FirstName.Equals("") || LastName.Equals("") || JobTitle.Equals("") || Address.Equals(""))
+            if (No.Equals("") || FirstName.Equals("") || LastName.Equals("") || JobTitle.Equals("") || Address.Equals("")) //Checks if all the values are empty
             {
-                MessageBox.Show("Error Occured. Please make sure that all fields are filled in.");
+                MessageBox.Show("Error Occured. Please make sure that all fields are filled in."); //If they are empty, send this message
                 return;
             }
 
             try
             {
-                proxy.AddEmployee(No, FirstName, LastName, JobTitle, Address);
-                dataGridViewEmployee.Rows.Add(No, FirstName, LastName, JobTitle, Address);
-                ClearTxtBoxes();
+                proxy.AddEmployee(No, FirstName, LastName, JobTitle, Address);              //Add employee to database
+                dataGridViewEmployee.Rows.Add(No, FirstName, LastName, JobTitle, Address);  //Add row in the gridView
+                ClearTxtBoxes();    //Clears all the boxes after pushing a button (click) 
             }
-            catch (Exception e1)
+            catch (Exception e1) 
             { 
                 MessageBox.Show("Error Occured. Message: " + e1.Message);
             }
