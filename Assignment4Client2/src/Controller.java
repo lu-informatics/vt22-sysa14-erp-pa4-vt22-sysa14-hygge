@@ -94,8 +94,8 @@ public class Controller {
 						String JobTitle = employeeFrame.getTxtFieldJobTitle().getText();		//Get input from the TextFields
 						String Address = employeeFrame.getTxtFieldAddress().getText(); 			//Get input from the TextFields
 						
-						if (FirstName.equals("") || LastName.equals("") || JobTitle.equals("") || Address.equals("")) {
-							employeeFrame.displayErrorMessage("Error Occured. Please make sure that all fields except No are filled in."); //Error handling. If the user does not fill in all the text fields, an error message will poop up 
+						if (FirstName.equals("") && LastName.equals("") && JobTitle.equals("") && Address.equals("")) {
+							employeeFrame.displayErrorMessage("Error Occured. Please make sure to fill in at least one field."); //Error handling. If the user does not fill in all the text fields, an error message will poop up 
 							return;
 						}
 											

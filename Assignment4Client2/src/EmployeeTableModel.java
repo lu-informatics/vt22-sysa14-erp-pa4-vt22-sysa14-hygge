@@ -13,9 +13,11 @@ public class EmployeeTableModel extends AbstractTableModel {
 		this.fireTableDataChanged(); 		//addEmployee, Add for Table Model, "fire".When this happens, the JTable will update
 	}
 	
-	public void removeEmployee(int rowIndex) {		
+	public CRONUS_Sverige_AB_Employee removeEmployee(int rowIndex) { // Method to remove employee from TableModel. Return the removed employee
+		CRONUS_Sverige_AB_Employee tmpEmployee = employees.get(rowIndex);
 		employees.remove(rowIndex);
 		this.fireTableDataChanged(); 			//removeEmployee, Remove a row (employee) in Table Model
+		return tmpEmployee;
 	}
 	
 	@Override
@@ -49,5 +51,26 @@ public class EmployeeTableModel extends AbstractTableModel {
 		
 		return null;  
 	}
-
+	
+	@Override //Set Comments
+	public void setValueAt(Object val, int rowIndex, int columnIndex) {			
+		CRONUS_Sverige_AB_Employee tmpEmployee = employees.get(rowIndex);  
+		
+		if(columnIndex == 1) {
+			String newFirstName = val.toString();
+			tmpEmployee.setFirst_Name(newFirstName);
+	
+		} else if(columnIndex == 2) {
+			String newLastName = val.toString();
+			tmpEmployee.setLast_Name(newLastName);
+		}
+		else if(columnIndex == 3) {
+			String newJobTitle = val.toString();
+			tmpEmployee.setJob_Title(newJobTitle); 
+		} 
+		else if(columnIndex == 4) {
+			String newAddress = val.toString();
+			tmpEmployee.setAddress(newAddress);
+		}
+	}
 }
