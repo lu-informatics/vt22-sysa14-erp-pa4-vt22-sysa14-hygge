@@ -24,7 +24,9 @@ namespace CronusWebApplication
             dataAccessLayer = new DataAccessLayer();       
         }
 
-        [WebMethod]
+        //The web methods follow crud and by that calling data access layer
+
+        [WebMethod] 
         public List<CRONUS_Sverige_AB_Employee> GetEmployees() 
         {
             return dataAccessLayer.GetEmployees();

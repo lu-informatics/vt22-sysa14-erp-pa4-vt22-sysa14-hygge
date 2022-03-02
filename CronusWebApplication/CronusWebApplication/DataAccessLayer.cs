@@ -96,37 +96,33 @@ namespace CronusWebApplication
             using (CronusEntities cronusEntities = new CronusEntities())
 
             {
-                CRONUS_Sverige_AB_Employee tmpEmployee = cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == No_).First();
+                CRONUS_Sverige_AB_Employee tmpEmployee = cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == No_).First();    //Retrieves the first employee with matching No_
 
-                if (tmpEmployee != null)
+                try
+
                 {
-                    try
-
+                    if (First_Name != "")                           //Every column that has been given a value will be updated
                     {
-                        if (First_Name != "")
-                        {
-                            tmpEmployee.First_Name = First_Name;
-                        }
-                        if (Last_Name != "")
-                        {
-                            tmpEmployee.Last_Name = Last_Name;
-                        }
-                        if (Job_Title != "")
-                        {
-                            tmpEmployee.Job_Title = Job_Title;
-                        }
-                        if (Address != "")
-                        {
-                            tmpEmployee.Address = Address;
-                        }
-                        cronusEntities.SaveChanges();
+                        tmpEmployee.First_Name = First_Name;
                     }
-
-                    catch (InvalidOperationException ex)
+                    if (Last_Name != "")
                     {
-                        throw;
+                        tmpEmployee.Last_Name = Last_Name;
                     }
+                    if (Job_Title != "")
+                    {
+                        tmpEmployee.Job_Title = Job_Title;
+                    }
+                    if (Address != "")
+                    {
+                        tmpEmployee.Address = Address;
+                    }
+                    cronusEntities.SaveChanges();
+                }
 
+                catch (InvalidOperationException ex)
+                {
+                    throw;
                 }
 
             }
@@ -144,7 +140,7 @@ namespace CronusWebApplication
                 cronusEntities.CRONUS_Sverige_AB_Employee.Remove(tmpEmployee);
 
                 cronusEntities.SaveChanges();
-            }
+            }   
 
         }
     }
