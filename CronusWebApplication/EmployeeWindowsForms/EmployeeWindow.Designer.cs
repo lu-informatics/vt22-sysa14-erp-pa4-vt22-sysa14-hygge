@@ -64,6 +64,7 @@
             // txtBoxNo
             // 
             this.txtBoxNo.Location = new System.Drawing.Point(104, 77);
+            this.txtBoxNo.MaxLength = 20;
             this.txtBoxNo.Name = "txtBoxNo";
             this.txtBoxNo.Size = new System.Drawing.Size(156, 20);
             this.txtBoxNo.TabIndex = 0;
@@ -71,6 +72,7 @@
             // txtBoxFirstName
             // 
             this.txtBoxFirstName.Location = new System.Drawing.Point(104, 121);
+            this.txtBoxFirstName.MaxLength = 30;
             this.txtBoxFirstName.Name = "txtBoxFirstName";
             this.txtBoxFirstName.Size = new System.Drawing.Size(156, 20);
             this.txtBoxFirstName.TabIndex = 1;
@@ -78,6 +80,7 @@
             // txtBoxLastName
             // 
             this.txtBoxLastName.Location = new System.Drawing.Point(104, 167);
+            this.txtBoxLastName.MaxLength = 30;
             this.txtBoxLastName.Name = "txtBoxLastName";
             this.txtBoxLastName.Size = new System.Drawing.Size(156, 20);
             this.txtBoxLastName.TabIndex = 2;
@@ -85,6 +88,7 @@
             // txtBoxJobTitle
             // 
             this.txtBoxJobTitle.Location = new System.Drawing.Point(104, 213);
+            this.txtBoxJobTitle.MaxLength = 30;
             this.txtBoxJobTitle.Name = "txtBoxJobTitle";
             this.txtBoxJobTitle.Size = new System.Drawing.Size(156, 20);
             this.txtBoxJobTitle.TabIndex = 3;
@@ -92,6 +96,7 @@
             // txtBoxAddress
             // 
             this.txtBoxAddress.Location = new System.Drawing.Point(104, 258);
+            this.txtBoxAddress.MaxLength = 50;
             this.txtBoxAddress.Name = "txtBoxAddress";
             this.txtBoxAddress.Size = new System.Drawing.Size(156, 20);
             this.txtBoxAddress.TabIndex = 4;

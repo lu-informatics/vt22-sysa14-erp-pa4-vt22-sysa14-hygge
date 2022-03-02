@@ -50,7 +50,7 @@ namespace EmployeeWindowsForms
             }
             catch (Exception e1)
             { 
-                MessageBox.Show("Error Occured. Please make sure that all fields are filled in and that No is unique.");
+                MessageBox.Show("Error Occured. Message: " + e1.Message);
             }
         }
 
@@ -108,7 +108,15 @@ namespace EmployeeWindowsForms
         {
             try
             {
-                foreach (DataGridViewRow row in dataGridViewEmployee.SelectedRows)
+                DataGridViewSelectedRowCollection rows = dataGridViewEmployee.SelectedRows;
+
+                if (rows.Count == 0)
+                {
+                    MessageBox.Show("Error Occured. Please select a row to be deleted.");
+                    return;
+                }
+
+                foreach (DataGridViewRow row in rows)
                 {
                     string No = row.Cells[0].Value.ToString();
                     proxy.DeleteEmployee(No);

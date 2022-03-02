@@ -51,12 +51,12 @@ public class EmployeeTableModel extends AbstractTableModel {
 		
 		return null;  
 	}
-	
-	@Override //Set Comments
-	public void setValueAt(Object val, int rowIndex, int columnIndex) {			
-		CRONUS_Sverige_AB_Employee tmpEmployee = employees.get(rowIndex);  
+				//Uses together the update method
+	@Override 	//Method to change value of a cell at a certain position in the tableModel [0]
+	public void setValueAt(Object val, int rowIndex, int columnIndex) {		
+		CRONUS_Sverige_AB_Employee tmpEmployee = employees.get(rowIndex);  //Get employee in the specified row
 		
-		if(columnIndex == 1) {
+		if(columnIndex == 1) {							//Changes the value of the specified employee and specified column 
 			String newFirstName = val.toString();
 			tmpEmployee.setFirst_Name(newFirstName);
 	
