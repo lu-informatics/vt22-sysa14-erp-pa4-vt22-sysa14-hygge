@@ -92,7 +92,6 @@ public class Controller {
 			public void actionPerformed(ActionEvent e) {
 
 				try {
-					CRONUS_Sverige_AB_Employee tmpEmployee = new CRONUS_Sverige_AB_Employee(); //////// Just tried some
 					String FirstName = employeeFrame.getTxtFieldFirstName().getText(); // Get input from the TextFields
 					String LastName = employeeFrame.getTxtFieldLastName().getText(); // Get input from the TextFields
 					String JobTitle = employeeFrame.getTxtFieldJobTitle().getText(); // Get input from the TextFields
