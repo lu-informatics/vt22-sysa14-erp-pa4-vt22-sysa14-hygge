@@ -20,6 +20,15 @@
             base.Dispose(disposing);
         }
 
+        public void ClearTxtBoxes() 
+        { 
+            this.txtBoxNo.Clear();
+            this.txtBoxFirstName.Clear();
+            this.txtBoxLastName.Clear();    
+            this.txtBoxJobTitle.Clear();
+            this.txtBoxAddress.Clear(); 
+        }
+
         #region Windows Form Designer generated code
 
         /// <summary>

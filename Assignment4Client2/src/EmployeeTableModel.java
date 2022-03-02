@@ -72,5 +72,6 @@ public class EmployeeTableModel extends AbstractTableModel {
 			String newAddress = val.toString();
 			tmpEmployee.setAddress(newAddress);
 		}
+		this.fireTableDataChanged();
 	}
 }

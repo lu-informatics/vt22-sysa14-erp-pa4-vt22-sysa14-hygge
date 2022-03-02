@@ -60,8 +60,7 @@ public class Controller {
 					employeeFrame.getEmployeeTableModel().addEmployee(tmpEmployee); // Add employee shows in the table
 					employeeFrame.clearTextFields(); // Clear the text fields after the action event
 				} catch (RemoteException e1) { // An error message
-					employeeFrame.displayErrorMessage(
-							"Error Occured. Please make sure that all fields are filled in and that No is unique.");
+					employeeFrame.displayErrorMessage("Error Occured. Please make sure that all fields are filled in and that No is unique.");
 				}
 			}
 		});
@@ -79,9 +78,7 @@ public class Controller {
 				} catch (RemoteException e1) { // Catch
 					employeeFrame.displayErrorMessage("Error Occured.");
 				} catch (IndexOutOfBoundsException e2) { // Catch when the user does not chose an employee to delete
-					employeeFrame
-							.displayErrorMessage("Error Occured. Please select a row in the table before deleting");
-
+					employeeFrame.displayErrorMessage("Error Occured. Please select a row in the table before deleting");
 				}
 
 			}
@@ -98,17 +95,29 @@ public class Controller {
 					String Address = employeeFrame.getTxtFieldAddress().getText(); // Get input from the TextFields
 
 					if (FirstName.equals("") && LastName.equals("") && JobTitle.equals("") && Address.equals("")) {
-						employeeFrame
-								.displayErrorMessage("Error Occured. Please make sure to fill in at least one field."); // Error handling. If the user does not fill in
+						employeeFrame.displayErrorMessage("Error Occured. Please make sure to fill in at least one field."); // Error handling. If the user does not fill in
 																														//.. all the text fields, an error message will pop up
-																														
+																								
 						return;
 					}
 
 					int rowIndex = employeeFrame.getEmployeeTable().getSelectedRow(); // Retrieved index of the selected row							
-
 					String No = employeeFrame.getEmployeeTableModel().getValueAt(rowIndex, 0).toString(); // Get the No at the retrieved row, [0]																					
 					proxy.updateEmployee(No, FirstName, LastName, JobTitle, Address); // Update employee in the database
+					
+					if (!FirstName.equals("")) {
+	                    employeeFrame.getEmployeeTableModel().setValueAt(FirstName, rowIndex, 1);
+	                }
+	                if (!LastName.equals("")) {
+	                	employeeFrame.getEmployeeTableModel().setValueAt(LastName, rowIndex, 2);
+	                }
+	                if (!JobTitle.equals("")) {
+	                	employeeFrame.getEmployeeTableModel().setValueAt(JobTitle, rowIndex, 3);
+	                }
+	                if (!Address.equals("")) {
+	                	employeeFrame.getEmployeeTableModel().setValueAt(Address, rowIndex, 4);
+	                }
+					
 					employeeFrame.clearTextFields(); // Clears the text fields after the action
 				} catch (RemoteException e1) { // Catch
 					employeeFrame.displayErrorMessage("Error Occured.");
@@ -126,11 +135,13 @@ public class Controller {
 					String No = employeeFrame.getTxtFieldNo().getText(); // Get No from the text field
 					CRONUS_Sverige_AB_Employee tmpEmployee = proxy.findEmployee(No); // Search for employee in the database
 					employeeFrame.getTxtAreaFindEmployee().setText( // Set text
+							"No: " + tmpEmployee.getNo_() + "\n" +
 							"First Name: " + tmpEmployee.getFirst_Name() + "\n" + // (one statement)
-					"Last Name: " + tmpEmployee.getLast_Name() + "\n" + "Job Title: " + tmpEmployee.getJob_Title()
-									+ "\n" + "Address: " + tmpEmployee.getAddress());
+							"Last Name: " + tmpEmployee.getLast_Name() + "\n" + 
+							"Job Title: " + tmpEmployee.getJob_Title() + "\n" + 
+							"Address: " + tmpEmployee.getAddress());
 					employeeFrame.clearTextFields(); // Clear text fields after using it
-
+					
 				} catch (RemoteException e1) { // Catch
 					employeeFrame.displayErrorMessage("Error Occured. Could not find an employee with the given No.");
 
