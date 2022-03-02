@@ -56,31 +56,31 @@ namespace EmployeeWindowsForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string FirstName = txtBoxFirstName.Text;
+            string FirstName = txtBoxFirstName.Text;    //Gets the values from the textBoxes
             string LastName = txtBoxLastName.Text;
             string JobTitle = txtBoxJobTitle.Text;
             string Address = txtBoxAddress.Text;
 
-            if (FirstName.Equals("") && LastName.Equals("") && JobTitle.Equals("") && Address.Equals(""))
+            if (FirstName.Equals("") && LastName.Equals("") && JobTitle.Equals("") && Address.Equals(""))       //Checks if all the values are empty
             {
-                MessageBox.Show("Error Occured. Please enter at least one value in one of the text fields.");
+                MessageBox.Show("Error Occured. Please enter at least one value in one of the text fields.");   //If they are empty, send this message
                 return; 
             }
 
             try
             {
 
-                DataGridViewSelectedRowCollection rows = dataGridViewEmployee.SelectedRows;
-                if (rows.Count != 1)
+                DataGridViewSelectedRowCollection rows = dataGridViewEmployee.SelectedRows;  //Retrieve selected rows
+                if (rows.Count != 1)    //If row is not 1 -> send message! Notice: you can only update in one row
                 {
                     MessageBox.Show("Error Occured. Please select one and only one row to be updated.");
                     return;
                 }
 
-                string No = rows[0].Cells[0].Value.ToString();
-                proxy.UpdateEmployee(No, FirstName, LastName, JobTitle, Address);
+                string No = rows[0].Cells[0].Value.ToString();      //Get No from selected row           
+                proxy.UpdateEmployee(No, FirstName, LastName, JobTitle, Address);   //Update in database
                 
-                if (!FirstName.Equals(""))
+                if (!FirstName.Equals(""))      //Update gridview cells if text field is nor empty              
                 {
                     rows[0].Cells[1].Value = FirstName;
                 }
@@ -108,19 +108,19 @@ namespace EmployeeWindowsForms
         {
             try
             {
-                DataGridViewSelectedRowCollection rows = dataGridViewEmployee.SelectedRows;
+                DataGridViewSelectedRowCollection rows = dataGridViewEmployee.SelectedRows;     //Retrieve selected rows
 
-                if (rows.Count == 0)
+                if (rows.Count == 0)    //Checks if the user has not selected a row 
                 {
                     MessageBox.Show("Error Occured. Please select a row to be deleted.");
                     return;
                 }
 
-                foreach (DataGridViewRow row in rows)
+                foreach (DataGridViewRow row in rows)               //iterates through selected rows
                 {
-                    string No = row.Cells[0].Value.ToString();
-                    proxy.DeleteEmployee(No);
-                    dataGridViewEmployee.Rows.RemoveAt(row.Index);                 
+                    string No = row.Cells[0].Value.ToString();      //Gets No of the selected row 
+                    proxy.DeleteEmployee(No);                       //Delete employee from database
+                    dataGridViewEmployee.Rows.RemoveAt(row.Index);  //Delete from gridView (not visible in GUI)                
                 }
             }
             catch (Exception e1)
