@@ -9,11 +9,11 @@ namespace CronusWebApplication
     public class DataAccessLayer
     {
         //FIND EMPLOYEE
-        public CRONUS_Sverige_AB_Employee FindEmployee(string No_) 
+        public CRONUS_Sverige_AB_Employee FindEmployee(string No_)  //Method to find employee with No
         {
-            using (CronusEntities cronusEntities = new CronusEntities())
+            using (CronusEntities cronusEntities = new CronusEntities())    
             {
-                CRONUS_Sverige_AB_Employee tmpEmployee = cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == No_).First();
+                CRONUS_Sverige_AB_Employee tmpEmployee = cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == No_).First(); //Retrieves the first employee with matching No_
                 return tmpEmployee;
 
             }
@@ -25,7 +25,7 @@ namespace CronusWebApplication
 
             using (CronusEntities cronusEntities = new CronusEntities())
             {
-                List<CRONUS_Sverige_AB_Employee> employees = cronusEntities.CRONUS_Sverige_AB_Employee.ToList();
+                List<CRONUS_Sverige_AB_Employee> employees = cronusEntities.CRONUS_Sverige_AB_Employee.ToList();    //A list of employees
                 return employees;
 
             }
@@ -35,9 +35,9 @@ namespace CronusWebApplication
         {
             using (CronusEntities cronusEntities = new CronusEntities())
             {
-                CRONUS_Sverige_AB_Employee tmpEmployee = new CRONUS_Sverige_AB_Employee()
+                CRONUS_Sverige_AB_Employee tmpEmployee = new CRONUS_Sverige_AB_Employee()   //Create a new employee object
                 {
-                    No_ = No_,
+                    No_ = No_,                              
                     First_Name = First_Name,
                     Middle_Name = "",
                     Last_Name = Last_Name,
@@ -45,8 +45,8 @@ namespace CronusWebApplication
                     Address = Address,
                     Initials = "",
                     Search_Name = "",
-                    Address_2 = "",
-                    City = "",
+                    Address_2 = "",                             //CRUD functionalities for No, FirstName, LastName, JobTitle, Address
+                    City = "",                                  //Rest of the values/columns in Cronus are set to default values. 
                     Post_Code = "",
                     County = "",
                     Phone_No_ = "",
@@ -83,7 +83,7 @@ namespace CronusWebApplication
                     No__Series = ""
                 };
 
-                cronusEntities.CRONUS_Sverige_AB_Employee.Add(tmpEmployee);
+                cronusEntities.CRONUS_Sverige_AB_Employee.Add(tmpEmployee);     //Add employee
 
                 cronusEntities.SaveChanges();   //Important because this is the way we save changes
 
