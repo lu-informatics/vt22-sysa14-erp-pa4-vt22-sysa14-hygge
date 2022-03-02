@@ -5,7 +5,7 @@ using System.Web;
 using System.Data.Entity.Validation;
 
 namespace CronusWebApplication
-{       //THE CONNECTION STRING WILL BE FOUND IN Web.config
+{       //THE CONNECTION (DB) WILL BE FOUND IN Web.config, line 27! (sql/querys)
     public class DataAccessLayer
     {
         //FIND EMPLOYEE
