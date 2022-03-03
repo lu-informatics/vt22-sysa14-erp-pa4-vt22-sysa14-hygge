@@ -39,7 +39,7 @@ public class EmployeeFrame extends JFrame {
 	 * Create the frame.												 
 	 */
 	public EmployeeFrame() {											//Background
-		getContentPane().setBackground(new Color(173, 216, 230));
+		getContentPane().setBackground(new Color(220, 238, 255));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 825, 526);
 		getContentPane().setLayout(null);
