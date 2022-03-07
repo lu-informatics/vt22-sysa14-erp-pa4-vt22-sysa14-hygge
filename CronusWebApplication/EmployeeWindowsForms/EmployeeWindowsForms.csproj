@@ -48,7 +48,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Connected Services\CronusReference\Reference.cs">
+    <Compile Include="Connected Services\CronusReference1\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Reference.svcmap</DependentUpon>
@@ -73,23 +73,23 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <None Include="Connected Services\CronusReference\CronusService.wsdl" />
-    <None Include="Connected Services\CronusReference\EmployeeWindowsForms.CronusReference.AddEmployeeResponse.datasource">
+    <None Include="Connected Services\CronusReference1\CronusService.wsdl" />
+    <None Include="Connected Services\CronusReference1\EmployeeWindowsForms.CronusReference1.AddEmployeeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CronusReference\EmployeeWindowsForms.CronusReference.CRONUS_Sverige_AB_Employee.datasource">
+    <None Include="Connected Services\CronusReference1\EmployeeWindowsForms.CronusReference1.CRONUS_Sverige_AB_Employee.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CronusReference\EmployeeWindowsForms.CronusReference.DeleteEmployeeResponse.datasource">
+    <None Include="Connected Services\CronusReference1\EmployeeWindowsForms.CronusReference1.DeleteEmployeeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CronusReference\EmployeeWindowsForms.CronusReference.FindEmployeeResponse.datasource">
+    <None Include="Connected Services\CronusReference1\EmployeeWindowsForms.CronusReference1.FindEmployeeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CronusReference\EmployeeWindowsForms.CronusReference.GetEmployeesResponse.datasource">
+    <None Include="Connected Services\CronusReference1\EmployeeWindowsForms.CronusReference1.GetEmployeesResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
-    <None Include="Connected Services\CronusReference\EmployeeWindowsForms.CronusReference.UpdateEmployeeResponse.datasource">
+    <None Include="Connected Services\CronusReference1\EmployeeWindowsForms.CronusReference1.UpdateEmployeeResponse.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
@@ -109,19 +109,16 @@
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <ItemGroup>
-    <WCFMetadataStorage Include="Connected Services\CronusReference\" />
+    <WCFMetadataStorage Include="Connected Services\CronusReference1\" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CronusReference\CronusService.disco" />
+    <None Include="Connected Services\CronusReference1\configuration91.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CronusReference\configuration91.svcinfo" />
+    <None Include="Connected Services\CronusReference1\configuration.svcinfo" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Connected Services\CronusReference\configuration.svcinfo" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Connected Services\CronusReference\Reference.svcmap">
+    <None Include="Connected Services\CronusReference1\Reference.svcmap">
       <Generator>WCF Proxy Generator</Generator>
       <LastGenOutput>Reference.cs</LastGenOutput>
     </None>

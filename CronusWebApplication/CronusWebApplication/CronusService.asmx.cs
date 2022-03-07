@@ -33,27 +33,27 @@ namespace CronusWebApplication
         }
 
         [WebMethod]
-        public void AddEmployee(string No_, string First_Name, string Last_Name, string Job_Title, string Address)
+        public void AddEmployee(string no, string firstName, string lastName, string jobTitle, string address)
         {
-            dataAccessLayer.AddEmployee(No_, First_Name, Last_Name, Job_Title, Address);
+            dataAccessLayer.AddEmployee(no, firstName, lastName, jobTitle, address);
         }
 
         [WebMethod]
-        public CRONUS_Sverige_AB_Employee FindEmployee(string No_)
+        public CRONUS_Sverige_AB_Employee FindEmployee(string no)
         {
-            return dataAccessLayer.FindEmployee(No_);
+            return dataAccessLayer.FindEmployee(no);
         }
 
         [WebMethod]
-        public void UpdateEmployee(string No_, string First_Name, string Last_Name, string Job_Title, string Address)
+        public void UpdateEmployee(string no, string firstName, string lastName, string jobTitle, string address)
         {
-            dataAccessLayer.UpdateEmployee(No_, First_Name, Last_Name, Job_Title, Address);
+            dataAccessLayer.UpdateEmployee(no, firstName, lastName, jobTitle, address);
         }
 
         [WebMethod]
-        public void DeleteEmployee(string No_) 
+        public void DeleteEmployee(string no) 
         { 
-            dataAccessLayer.DeleteEmployee(No_);
+            dataAccessLayer.DeleteEmployee(no);
         }
 
         

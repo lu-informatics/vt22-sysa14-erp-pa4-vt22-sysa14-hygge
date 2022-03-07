@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using EmployeeWindowsForms.CronusReference;
+using EmployeeWindowsForms.CronusReference1;
 
 namespace EmployeeWindowsForms
 {
@@ -30,13 +30,13 @@ namespace EmployeeWindowsForms
 
         private void btnCreate_Click(object sender, EventArgs e)
         {
-            string No = txtBoxNo.Text;                      //Gets the values from the textBoxes
-            string FirstName = txtBoxFirstName.Text;
-            string LastName = txtBoxLastName.Text;
-            string JobTitle = txtBoxJobTitle.Text;
-            string Address = txtBoxAddress.Text; 
+            string no = txtBoxNo.Text;                      //Gets the values from the textBoxes
+            string firstName = txtBoxFirstName.Text;
+            string lastName = txtBoxLastName.Text;
+            string jobTitle = txtBoxJobTitle.Text;
+            string address = txtBoxAddress.Text; 
 
-            if (No.Equals("") || FirstName.Equals("") || LastName.Equals("") || JobTitle.Equals("") || Address.Equals("")) //Checks if all the values are empty
+            if (no.Equals("") || firstName.Equals("") || lastName.Equals("") || jobTitle.Equals("") || address.Equals("")) //Checks if all the values are empty
             {
                 MessageBox.Show("Error Occured. Please make sure that all fields are filled in."); //If they are empty, send this message
                 return;
@@ -44,8 +44,8 @@ namespace EmployeeWindowsForms
 
             try
             {
-                proxy.AddEmployee(No, FirstName, LastName, JobTitle, Address);              //Add employee to database
-                dataGridViewEmployee.Rows.Add(No, FirstName, LastName, JobTitle, Address);  //Add row in the gridView
+                proxy.AddEmployee(no, firstName, lastName, jobTitle, address);              //Add employee to database
+                dataGridViewEmployee.Rows.Add(no, firstName, lastName, jobTitle, address);  //Add row in the gridView
                 ClearTxtBoxes();    //Clears all the boxes after pushing a button (click) 
             }
             catch (Exception e1) 
@@ -56,12 +56,12 @@ namespace EmployeeWindowsForms
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            string FirstName = txtBoxFirstName.Text;    //Gets the values from the textBoxes
-            string LastName = txtBoxLastName.Text;
-            string JobTitle = txtBoxJobTitle.Text;
-            string Address = txtBoxAddress.Text;
+            string firstName = txtBoxFirstName.Text;    //Gets the values from the textBoxes
+            string lastName = txtBoxLastName.Text;
+            string jobTitle = txtBoxJobTitle.Text;
+            string address = txtBoxAddress.Text;
 
-            if (FirstName.Equals("") && LastName.Equals("") && JobTitle.Equals("") && Address.Equals(""))       //Checks if all the values are empty
+            if (firstName.Equals("") && lastName.Equals("") && jobTitle.Equals("") && address.Equals(""))       //Checks if all the values are empty
             {
                 MessageBox.Show("Error Occured. Please enter at least one value in one of the text fields.");   //If they are empty, send this message
                 return; 
@@ -77,24 +77,24 @@ namespace EmployeeWindowsForms
                     return;
                 }
 
-                string No = rows[0].Cells[0].Value.ToString();      //Get No from selected row           
-                proxy.UpdateEmployee(No, FirstName, LastName, JobTitle, Address);   //Update in database
+                string no = rows[0].Cells[0].Value.ToString();      //Get No from selected row           
+                proxy.UpdateEmployee(no, firstName, lastName, jobTitle, address);   //Update in database
                 
-                if (!FirstName.Equals(""))      //Update gridview cells if text field is nor empty              
+                if (!firstName.Equals(""))      //Update gridview cells if text field is nor empty              
                 {
-                    rows[0].Cells[1].Value = FirstName;
+                    rows[0].Cells[1].Value = firstName;
                 }
-                if (!LastName.Equals(""))
+                if (!lastName.Equals(""))
                 {
-                    rows[0].Cells[2].Value = LastName;
+                    rows[0].Cells[2].Value = lastName;
                 }
-                if (!JobTitle.Equals(""))
+                if (!jobTitle.Equals(""))
                 {
-                    rows[0].Cells[3].Value = JobTitle;
+                    rows[0].Cells[3].Value = jobTitle;
                 }
-                if (!Address.Equals(""))
+                if (!address.Equals(""))
                 {
-                    rows[0].Cells[4].Value = Address;
+                    rows[0].Cells[4].Value = address;
                 }
                 ClearTxtBoxes();
             } 
@@ -118,12 +118,12 @@ namespace EmployeeWindowsForms
 
                 foreach (DataGridViewRow row in rows)               //iterates through selected rows
                 {
-                    string No = row.Cells[0].Value.ToString();      //Gets No of the selected row 
-                    proxy.DeleteEmployee(No);                       //Delete employee from database
+                    string no = row.Cells[0].Value.ToString();      //Gets No of the selected row 
+                    proxy.DeleteEmployee(no);                       //Delete employee from database
                     dataGridViewEmployee.Rows.RemoveAt(row.Index);  //Delete from gridView (not visible in GUI)                
                 }
             }
-            catch (Exception e1)
+            catch (Exception)
             {
                 MessageBox.Show("Error Occured. Please make sure that at least one row is selected.");
             }     
@@ -135,8 +135,8 @@ namespace EmployeeWindowsForms
             try
             {
                 txtBoxFindEmployee.Clear(); //Clear the field with information about an employee
-                string No = txtBoxNo.Text;  //Gets No from textbox
-                CRONUS_Sverige_AB_Employee employee = proxy.FindEmployee(No);   //Find employee from database
+                string no = txtBoxNo.Text;  //Gets No from textbox
+                CRONUS_Sverige_AB_Employee employee = proxy.FindEmployee(no);   //Find employee from database
                 txtBoxFindEmployee.AppendText("No: " + employee.No_ + Environment.NewLine);    //Show information about an employee
                 txtBoxFindEmployee.AppendText("First name: " + employee.First_Name + Environment.NewLine); 
                 txtBoxFindEmployee.AppendText("Last Name: " + employee.Last_Name + Environment.NewLine);
@@ -144,7 +144,7 @@ namespace EmployeeWindowsForms
                 txtBoxFindEmployee.AppendText("Address: " + employee.Address + Environment.NewLine);
                 ClearTxtBoxes();
             }
-            catch (Exception e1)
+            catch (Exception)
             {
                 MessageBox.Show("Error Occured. Make sure the entered No exists.");
             }

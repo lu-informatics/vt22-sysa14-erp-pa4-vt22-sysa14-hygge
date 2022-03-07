@@ -9,11 +9,11 @@ namespace CronusWebApplication
     public class DataAccessLayer
     {
         //FIND EMPLOYEE
-        public CRONUS_Sverige_AB_Employee FindEmployee(string No_)  //Method to find employee with No
+        public CRONUS_Sverige_AB_Employee FindEmployee(string no)  //Method to find employee with No
         {
             using (CronusEntities cronusEntities = new CronusEntities())    
             {
-                CRONUS_Sverige_AB_Employee tmpEmployee = cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == No_).First(); //Retrieves the first employee with matching No_
+                CRONUS_Sverige_AB_Employee tmpEmployee = cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == no).First(); //Retrieves the first employee with matching No_
                 return tmpEmployee;
 
             }
@@ -31,18 +31,18 @@ namespace CronusWebApplication
             }
         }
         //ADD EMPLOYEE
-        public void AddEmployee(string No_, string First_Name, string Last_Name, string Job_Title, string Address)
+        public void AddEmployee(string no, string firstName, string lastName, string jobTitle, string address)
         {
             using (CronusEntities cronusEntities = new CronusEntities())
             {
                 CRONUS_Sverige_AB_Employee tmpEmployee = new CRONUS_Sverige_AB_Employee()   //Create a new employee object
                 {
-                    No_ = No_,                              
-                    First_Name = First_Name,
+                    No_ = no,                              
+                    First_Name = firstName,
                     Middle_Name = "",
-                    Last_Name = Last_Name,
-                    Job_Title = Job_Title,
-                    Address = Address,
+                    Last_Name = lastName,
+                    Job_Title = jobTitle,
+                    Address = address,
                     Initials = "",
                     Search_Name = "",
                     Address_2 = "",                             //CRUD functionalities for No, FirstName, LastName, JobTitle, Address
@@ -91,31 +91,31 @@ namespace CronusWebApplication
 
         }
         //UPDATE EMPLOYEE
-        public void UpdateEmployee(string No_, string First_Name, string Last_Name, string Job_Title, string Address)
+        public void UpdateEmployee(string no, string firstName, string lastName, string jobTitle, string address)
         {
             using (CronusEntities cronusEntities = new CronusEntities())
 
             {
-                CRONUS_Sverige_AB_Employee tmpEmployee = cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == No_).First();    //Retrieves the first employee with matching No_
+                CRONUS_Sverige_AB_Employee tmpEmployee = cronusEntities.CRONUS_Sverige_AB_Employee.Where(e => e.No_ == no).First();    //Retrieves the first employee with matching No_
 
                 try
 
                 {
-                    if (First_Name != "")                           //Every column that has been given a value will be updated
+                    if (firstName != "")                           //Every column that has been given a value will be updated
                     {
-                        tmpEmployee.First_Name = First_Name;
+                        tmpEmployee.First_Name = firstName;
                     }
-                    if (Last_Name != "")
+                    if (lastName != "")
                     {
-                        tmpEmployee.Last_Name = Last_Name;
+                        tmpEmployee.Last_Name = lastName;
                     }
-                    if (Job_Title != "")
+                    if (jobTitle != "")
                     {
-                        tmpEmployee.Job_Title = Job_Title;
+                        tmpEmployee.Job_Title = jobTitle;
                     }
-                    if (Address != "")
+                    if (address != "")
                     {
-                        tmpEmployee.Address = Address;
+                        tmpEmployee.Address = address;
                     }
                     cronusEntities.SaveChanges();
                 }
@@ -128,12 +128,12 @@ namespace CronusWebApplication
             }
         }
         //DELETE EMPLOYEE
-        public void DeleteEmployee(string No_)
+        public void DeleteEmployee(string no)
         {
             using (CronusEntities cronusEntities = new CronusEntities())
             {
 
-                CRONUS_Sverige_AB_Employee tmpEmployee = this.FindEmployee(No_);               
+                CRONUS_Sverige_AB_Employee tmpEmployee = this.FindEmployee(no);               
 
                 cronusEntities.CRONUS_Sverige_AB_Employee.Attach(tmpEmployee);
 

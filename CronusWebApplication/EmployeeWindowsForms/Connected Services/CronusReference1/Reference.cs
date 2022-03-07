@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EmployeeWindowsForms.CronusReference {
+namespace EmployeeWindowsForms.CronusReference1 {
     using System.Runtime.Serialization;
     using System;
     
@@ -770,43 +770,43 @@ namespace EmployeeWindowsForms.CronusReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CronusReference.CronusServiceSoap")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="CronusReference1.CronusServiceSoap")]
     public interface CronusServiceSoap {
         
         // CODEGEN: Generating message contract since element name GetEmployeesResult from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetEmployees", ReplyAction="*")]
-        EmployeeWindowsForms.CronusReference.GetEmployeesResponse GetEmployees(EmployeeWindowsForms.CronusReference.GetEmployeesRequest request);
+        EmployeeWindowsForms.CronusReference1.GetEmployeesResponse GetEmployees(EmployeeWindowsForms.CronusReference1.GetEmployeesRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetEmployees", ReplyAction="*")]
-        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.GetEmployeesResponse> GetEmployeesAsync(EmployeeWindowsForms.CronusReference.GetEmployeesRequest request);
+        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.GetEmployeesResponse> GetEmployeesAsync(EmployeeWindowsForms.CronusReference1.GetEmployeesRequest request);
         
-        // CODEGEN: Generating message contract since element name No_ from namespace http://tempuri.org/ is not marked nillable
+        // CODEGEN: Generating message contract since element name no from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddEmployee", ReplyAction="*")]
-        EmployeeWindowsForms.CronusReference.AddEmployeeResponse AddEmployee(EmployeeWindowsForms.CronusReference.AddEmployeeRequest request);
+        EmployeeWindowsForms.CronusReference1.AddEmployeeResponse AddEmployee(EmployeeWindowsForms.CronusReference1.AddEmployeeRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/AddEmployee", ReplyAction="*")]
-        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.AddEmployeeResponse> AddEmployeeAsync(EmployeeWindowsForms.CronusReference.AddEmployeeRequest request);
+        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.AddEmployeeResponse> AddEmployeeAsync(EmployeeWindowsForms.CronusReference1.AddEmployeeRequest request);
         
-        // CODEGEN: Generating message contract since element name No_ from namespace http://tempuri.org/ is not marked nillable
+        // CODEGEN: Generating message contract since element name no from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FindEmployee", ReplyAction="*")]
-        EmployeeWindowsForms.CronusReference.FindEmployeeResponse FindEmployee(EmployeeWindowsForms.CronusReference.FindEmployeeRequest request);
+        EmployeeWindowsForms.CronusReference1.FindEmployeeResponse FindEmployee(EmployeeWindowsForms.CronusReference1.FindEmployeeRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/FindEmployee", ReplyAction="*")]
-        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.FindEmployeeResponse> FindEmployeeAsync(EmployeeWindowsForms.CronusReference.FindEmployeeRequest request);
+        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.FindEmployeeResponse> FindEmployeeAsync(EmployeeWindowsForms.CronusReference1.FindEmployeeRequest request);
         
-        // CODEGEN: Generating message contract since element name No_ from namespace http://tempuri.org/ is not marked nillable
+        // CODEGEN: Generating message contract since element name no from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateEmployee", ReplyAction="*")]
-        EmployeeWindowsForms.CronusReference.UpdateEmployeeResponse UpdateEmployee(EmployeeWindowsForms.CronusReference.UpdateEmployeeRequest request);
+        EmployeeWindowsForms.CronusReference1.UpdateEmployeeResponse UpdateEmployee(EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/UpdateEmployee", ReplyAction="*")]
-        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.UpdateEmployeeResponse> UpdateEmployeeAsync(EmployeeWindowsForms.CronusReference.UpdateEmployeeRequest request);
+        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.UpdateEmployeeResponse> UpdateEmployeeAsync(EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequest request);
         
-        // CODEGEN: Generating message contract since element name No_ from namespace http://tempuri.org/ is not marked nillable
+        // CODEGEN: Generating message contract since element name no from namespace http://tempuri.org/ is not marked nillable
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteEmployee", ReplyAction="*")]
-        EmployeeWindowsForms.CronusReference.DeleteEmployeeResponse DeleteEmployee(EmployeeWindowsForms.CronusReference.DeleteEmployeeRequest request);
+        EmployeeWindowsForms.CronusReference1.DeleteEmployeeResponse DeleteEmployee(EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequest request);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/DeleteEmployee", ReplyAction="*")]
-        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.DeleteEmployeeResponse> DeleteEmployeeAsync(EmployeeWindowsForms.CronusReference.DeleteEmployeeRequest request);
+        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.DeleteEmployeeResponse> DeleteEmployeeAsync(EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequest request);
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
@@ -816,12 +816,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class GetEmployeesRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployees", Namespace="http://tempuri.org/", Order=0)]
-        public EmployeeWindowsForms.CronusReference.GetEmployeesRequestBody Body;
+        public EmployeeWindowsForms.CronusReference1.GetEmployeesRequestBody Body;
         
         public GetEmployeesRequest() {
         }
         
-        public GetEmployeesRequest(EmployeeWindowsForms.CronusReference.GetEmployeesRequestBody Body) {
+        public GetEmployeesRequest(EmployeeWindowsForms.CronusReference1.GetEmployeesRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -843,12 +843,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class GetEmployeesResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="GetEmployeesResponse", Namespace="http://tempuri.org/", Order=0)]
-        public EmployeeWindowsForms.CronusReference.GetEmployeesResponseBody Body;
+        public EmployeeWindowsForms.CronusReference1.GetEmployeesResponseBody Body;
         
         public GetEmployeesResponse() {
         }
         
-        public GetEmployeesResponse(EmployeeWindowsForms.CronusReference.GetEmployeesResponseBody Body) {
+        public GetEmployeesResponse(EmployeeWindowsForms.CronusReference1.GetEmployeesResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -860,12 +860,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class GetEmployeesResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public EmployeeWindowsForms.CronusReference.CRONUS_Sverige_AB_Employee[] GetEmployeesResult;
+        public EmployeeWindowsForms.CronusReference1.CRONUS_Sverige_AB_Employee[] GetEmployeesResult;
         
         public GetEmployeesResponseBody() {
         }
         
-        public GetEmployeesResponseBody(EmployeeWindowsForms.CronusReference.CRONUS_Sverige_AB_Employee[] GetEmployeesResult) {
+        public GetEmployeesResponseBody(EmployeeWindowsForms.CronusReference1.CRONUS_Sverige_AB_Employee[] GetEmployeesResult) {
             this.GetEmployeesResult = GetEmployeesResult;
         }
     }
@@ -877,12 +877,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class AddEmployeeRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="AddEmployee", Namespace="http://tempuri.org/", Order=0)]
-        public EmployeeWindowsForms.CronusReference.AddEmployeeRequestBody Body;
+        public EmployeeWindowsForms.CronusReference1.AddEmployeeRequestBody Body;
         
         public AddEmployeeRequest() {
         }
         
-        public AddEmployeeRequest(EmployeeWindowsForms.CronusReference.AddEmployeeRequestBody Body) {
+        public AddEmployeeRequest(EmployeeWindowsForms.CronusReference1.AddEmployeeRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -894,29 +894,29 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class AddEmployeeRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string No_;
+        public string no;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string First_Name;
+        public string firstName;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string Last_Name;
+        public string lastName;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string Job_Title;
+        public string jobTitle;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string Address;
+        public string address;
         
         public AddEmployeeRequestBody() {
         }
         
-        public AddEmployeeRequestBody(string No_, string First_Name, string Last_Name, string Job_Title, string Address) {
-            this.No_ = No_;
-            this.First_Name = First_Name;
-            this.Last_Name = Last_Name;
-            this.Job_Title = Job_Title;
-            this.Address = Address;
+        public AddEmployeeRequestBody(string no, string firstName, string lastName, string jobTitle, string address) {
+            this.no = no;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.jobTitle = jobTitle;
+            this.address = address;
         }
     }
     
@@ -927,12 +927,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class AddEmployeeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="AddEmployeeResponse", Namespace="http://tempuri.org/", Order=0)]
-        public EmployeeWindowsForms.CronusReference.AddEmployeeResponseBody Body;
+        public EmployeeWindowsForms.CronusReference1.AddEmployeeResponseBody Body;
         
         public AddEmployeeResponse() {
         }
         
-        public AddEmployeeResponse(EmployeeWindowsForms.CronusReference.AddEmployeeResponseBody Body) {
+        public AddEmployeeResponse(EmployeeWindowsForms.CronusReference1.AddEmployeeResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -954,12 +954,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class FindEmployeeRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="FindEmployee", Namespace="http://tempuri.org/", Order=0)]
-        public EmployeeWindowsForms.CronusReference.FindEmployeeRequestBody Body;
+        public EmployeeWindowsForms.CronusReference1.FindEmployeeRequestBody Body;
         
         public FindEmployeeRequest() {
         }
         
-        public FindEmployeeRequest(EmployeeWindowsForms.CronusReference.FindEmployeeRequestBody Body) {
+        public FindEmployeeRequest(EmployeeWindowsForms.CronusReference1.FindEmployeeRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -971,13 +971,13 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class FindEmployeeRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string No_;
+        public string no;
         
         public FindEmployeeRequestBody() {
         }
         
-        public FindEmployeeRequestBody(string No_) {
-            this.No_ = No_;
+        public FindEmployeeRequestBody(string no) {
+            this.no = no;
         }
     }
     
@@ -988,12 +988,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class FindEmployeeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="FindEmployeeResponse", Namespace="http://tempuri.org/", Order=0)]
-        public EmployeeWindowsForms.CronusReference.FindEmployeeResponseBody Body;
+        public EmployeeWindowsForms.CronusReference1.FindEmployeeResponseBody Body;
         
         public FindEmployeeResponse() {
         }
         
-        public FindEmployeeResponse(EmployeeWindowsForms.CronusReference.FindEmployeeResponseBody Body) {
+        public FindEmployeeResponse(EmployeeWindowsForms.CronusReference1.FindEmployeeResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -1005,12 +1005,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class FindEmployeeResponseBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public EmployeeWindowsForms.CronusReference.CRONUS_Sverige_AB_Employee FindEmployeeResult;
+        public EmployeeWindowsForms.CronusReference1.CRONUS_Sverige_AB_Employee FindEmployeeResult;
         
         public FindEmployeeResponseBody() {
         }
         
-        public FindEmployeeResponseBody(EmployeeWindowsForms.CronusReference.CRONUS_Sverige_AB_Employee FindEmployeeResult) {
+        public FindEmployeeResponseBody(EmployeeWindowsForms.CronusReference1.CRONUS_Sverige_AB_Employee FindEmployeeResult) {
             this.FindEmployeeResult = FindEmployeeResult;
         }
     }
@@ -1022,12 +1022,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class UpdateEmployeeRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateEmployee", Namespace="http://tempuri.org/", Order=0)]
-        public EmployeeWindowsForms.CronusReference.UpdateEmployeeRequestBody Body;
+        public EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequestBody Body;
         
         public UpdateEmployeeRequest() {
         }
         
-        public UpdateEmployeeRequest(EmployeeWindowsForms.CronusReference.UpdateEmployeeRequestBody Body) {
+        public UpdateEmployeeRequest(EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -1039,29 +1039,29 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class UpdateEmployeeRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string No_;
+        public string no;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=1)]
-        public string First_Name;
+        public string firstName;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=2)]
-        public string Last_Name;
+        public string lastName;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=3)]
-        public string Job_Title;
+        public string jobTitle;
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=4)]
-        public string Address;
+        public string address;
         
         public UpdateEmployeeRequestBody() {
         }
         
-        public UpdateEmployeeRequestBody(string No_, string First_Name, string Last_Name, string Job_Title, string Address) {
-            this.No_ = No_;
-            this.First_Name = First_Name;
-            this.Last_Name = Last_Name;
-            this.Job_Title = Job_Title;
-            this.Address = Address;
+        public UpdateEmployeeRequestBody(string no, string firstName, string lastName, string jobTitle, string address) {
+            this.no = no;
+            this.firstName = firstName;
+            this.lastName = lastName;
+            this.jobTitle = jobTitle;
+            this.address = address;
         }
     }
     
@@ -1072,12 +1072,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class UpdateEmployeeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="UpdateEmployeeResponse", Namespace="http://tempuri.org/", Order=0)]
-        public EmployeeWindowsForms.CronusReference.UpdateEmployeeResponseBody Body;
+        public EmployeeWindowsForms.CronusReference1.UpdateEmployeeResponseBody Body;
         
         public UpdateEmployeeResponse() {
         }
         
-        public UpdateEmployeeResponse(EmployeeWindowsForms.CronusReference.UpdateEmployeeResponseBody Body) {
+        public UpdateEmployeeResponse(EmployeeWindowsForms.CronusReference1.UpdateEmployeeResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -1099,12 +1099,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class DeleteEmployeeRequest {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteEmployee", Namespace="http://tempuri.org/", Order=0)]
-        public EmployeeWindowsForms.CronusReference.DeleteEmployeeRequestBody Body;
+        public EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequestBody Body;
         
         public DeleteEmployeeRequest() {
         }
         
-        public DeleteEmployeeRequest(EmployeeWindowsForms.CronusReference.DeleteEmployeeRequestBody Body) {
+        public DeleteEmployeeRequest(EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequestBody Body) {
             this.Body = Body;
         }
     }
@@ -1116,13 +1116,13 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class DeleteEmployeeRequestBody {
         
         [System.Runtime.Serialization.DataMemberAttribute(EmitDefaultValue=false, Order=0)]
-        public string No_;
+        public string no;
         
         public DeleteEmployeeRequestBody() {
         }
         
-        public DeleteEmployeeRequestBody(string No_) {
-            this.No_ = No_;
+        public DeleteEmployeeRequestBody(string no) {
+            this.no = no;
         }
     }
     
@@ -1133,12 +1133,12 @@ namespace EmployeeWindowsForms.CronusReference {
     public partial class DeleteEmployeeResponse {
         
         [System.ServiceModel.MessageBodyMemberAttribute(Name="DeleteEmployeeResponse", Namespace="http://tempuri.org/", Order=0)]
-        public EmployeeWindowsForms.CronusReference.DeleteEmployeeResponseBody Body;
+        public EmployeeWindowsForms.CronusReference1.DeleteEmployeeResponseBody Body;
         
         public DeleteEmployeeResponse() {
         }
         
-        public DeleteEmployeeResponse(EmployeeWindowsForms.CronusReference.DeleteEmployeeResponseBody Body) {
+        public DeleteEmployeeResponse(EmployeeWindowsForms.CronusReference1.DeleteEmployeeResponseBody Body) {
             this.Body = Body;
         }
     }
@@ -1154,12 +1154,12 @@ namespace EmployeeWindowsForms.CronusReference {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface CronusServiceSoapChannel : EmployeeWindowsForms.CronusReference.CronusServiceSoap, System.ServiceModel.IClientChannel {
+    public interface CronusServiceSoapChannel : EmployeeWindowsForms.CronusReference1.CronusServiceSoap, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class CronusServiceSoapClient : System.ServiceModel.ClientBase<EmployeeWindowsForms.CronusReference.CronusServiceSoap>, EmployeeWindowsForms.CronusReference.CronusServiceSoap {
+    public partial class CronusServiceSoapClient : System.ServiceModel.ClientBase<EmployeeWindowsForms.CronusReference1.CronusServiceSoap>, EmployeeWindowsForms.CronusReference1.CronusServiceSoap {
         
         public CronusServiceSoapClient() {
         }
@@ -1181,139 +1181,139 @@ namespace EmployeeWindowsForms.CronusReference {
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        EmployeeWindowsForms.CronusReference.GetEmployeesResponse EmployeeWindowsForms.CronusReference.CronusServiceSoap.GetEmployees(EmployeeWindowsForms.CronusReference.GetEmployeesRequest request) {
+        EmployeeWindowsForms.CronusReference1.GetEmployeesResponse EmployeeWindowsForms.CronusReference1.CronusServiceSoap.GetEmployees(EmployeeWindowsForms.CronusReference1.GetEmployeesRequest request) {
             return base.Channel.GetEmployees(request);
         }
         
-        public EmployeeWindowsForms.CronusReference.CRONUS_Sverige_AB_Employee[] GetEmployees() {
-            EmployeeWindowsForms.CronusReference.GetEmployeesRequest inValue = new EmployeeWindowsForms.CronusReference.GetEmployeesRequest();
-            inValue.Body = new EmployeeWindowsForms.CronusReference.GetEmployeesRequestBody();
-            EmployeeWindowsForms.CronusReference.GetEmployeesResponse retVal = ((EmployeeWindowsForms.CronusReference.CronusServiceSoap)(this)).GetEmployees(inValue);
+        public EmployeeWindowsForms.CronusReference1.CRONUS_Sverige_AB_Employee[] GetEmployees() {
+            EmployeeWindowsForms.CronusReference1.GetEmployeesRequest inValue = new EmployeeWindowsForms.CronusReference1.GetEmployeesRequest();
+            inValue.Body = new EmployeeWindowsForms.CronusReference1.GetEmployeesRequestBody();
+            EmployeeWindowsForms.CronusReference1.GetEmployeesResponse retVal = ((EmployeeWindowsForms.CronusReference1.CronusServiceSoap)(this)).GetEmployees(inValue);
             return retVal.Body.GetEmployeesResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.GetEmployeesResponse> EmployeeWindowsForms.CronusReference.CronusServiceSoap.GetEmployeesAsync(EmployeeWindowsForms.CronusReference.GetEmployeesRequest request) {
+        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.GetEmployeesResponse> EmployeeWindowsForms.CronusReference1.CronusServiceSoap.GetEmployeesAsync(EmployeeWindowsForms.CronusReference1.GetEmployeesRequest request) {
             return base.Channel.GetEmployeesAsync(request);
         }
         
-        public System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.GetEmployeesResponse> GetEmployeesAsync() {
-            EmployeeWindowsForms.CronusReference.GetEmployeesRequest inValue = new EmployeeWindowsForms.CronusReference.GetEmployeesRequest();
-            inValue.Body = new EmployeeWindowsForms.CronusReference.GetEmployeesRequestBody();
-            return ((EmployeeWindowsForms.CronusReference.CronusServiceSoap)(this)).GetEmployeesAsync(inValue);
+        public System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.GetEmployeesResponse> GetEmployeesAsync() {
+            EmployeeWindowsForms.CronusReference1.GetEmployeesRequest inValue = new EmployeeWindowsForms.CronusReference1.GetEmployeesRequest();
+            inValue.Body = new EmployeeWindowsForms.CronusReference1.GetEmployeesRequestBody();
+            return ((EmployeeWindowsForms.CronusReference1.CronusServiceSoap)(this)).GetEmployeesAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        EmployeeWindowsForms.CronusReference.AddEmployeeResponse EmployeeWindowsForms.CronusReference.CronusServiceSoap.AddEmployee(EmployeeWindowsForms.CronusReference.AddEmployeeRequest request) {
+        EmployeeWindowsForms.CronusReference1.AddEmployeeResponse EmployeeWindowsForms.CronusReference1.CronusServiceSoap.AddEmployee(EmployeeWindowsForms.CronusReference1.AddEmployeeRequest request) {
             return base.Channel.AddEmployee(request);
         }
         
-        public void AddEmployee(string No_, string First_Name, string Last_Name, string Job_Title, string Address) {
-            EmployeeWindowsForms.CronusReference.AddEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference.AddEmployeeRequest();
-            inValue.Body = new EmployeeWindowsForms.CronusReference.AddEmployeeRequestBody();
-            inValue.Body.No_ = No_;
-            inValue.Body.First_Name = First_Name;
-            inValue.Body.Last_Name = Last_Name;
-            inValue.Body.Job_Title = Job_Title;
-            inValue.Body.Address = Address;
-            EmployeeWindowsForms.CronusReference.AddEmployeeResponse retVal = ((EmployeeWindowsForms.CronusReference.CronusServiceSoap)(this)).AddEmployee(inValue);
+        public void AddEmployee(string no, string firstName, string lastName, string jobTitle, string address) {
+            EmployeeWindowsForms.CronusReference1.AddEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference1.AddEmployeeRequest();
+            inValue.Body = new EmployeeWindowsForms.CronusReference1.AddEmployeeRequestBody();
+            inValue.Body.no = no;
+            inValue.Body.firstName = firstName;
+            inValue.Body.lastName = lastName;
+            inValue.Body.jobTitle = jobTitle;
+            inValue.Body.address = address;
+            EmployeeWindowsForms.CronusReference1.AddEmployeeResponse retVal = ((EmployeeWindowsForms.CronusReference1.CronusServiceSoap)(this)).AddEmployee(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.AddEmployeeResponse> EmployeeWindowsForms.CronusReference.CronusServiceSoap.AddEmployeeAsync(EmployeeWindowsForms.CronusReference.AddEmployeeRequest request) {
+        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.AddEmployeeResponse> EmployeeWindowsForms.CronusReference1.CronusServiceSoap.AddEmployeeAsync(EmployeeWindowsForms.CronusReference1.AddEmployeeRequest request) {
             return base.Channel.AddEmployeeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.AddEmployeeResponse> AddEmployeeAsync(string No_, string First_Name, string Last_Name, string Job_Title, string Address) {
-            EmployeeWindowsForms.CronusReference.AddEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference.AddEmployeeRequest();
-            inValue.Body = new EmployeeWindowsForms.CronusReference.AddEmployeeRequestBody();
-            inValue.Body.No_ = No_;
-            inValue.Body.First_Name = First_Name;
-            inValue.Body.Last_Name = Last_Name;
-            inValue.Body.Job_Title = Job_Title;
-            inValue.Body.Address = Address;
-            return ((EmployeeWindowsForms.CronusReference.CronusServiceSoap)(this)).AddEmployeeAsync(inValue);
+        public System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.AddEmployeeResponse> AddEmployeeAsync(string no, string firstName, string lastName, string jobTitle, string address) {
+            EmployeeWindowsForms.CronusReference1.AddEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference1.AddEmployeeRequest();
+            inValue.Body = new EmployeeWindowsForms.CronusReference1.AddEmployeeRequestBody();
+            inValue.Body.no = no;
+            inValue.Body.firstName = firstName;
+            inValue.Body.lastName = lastName;
+            inValue.Body.jobTitle = jobTitle;
+            inValue.Body.address = address;
+            return ((EmployeeWindowsForms.CronusReference1.CronusServiceSoap)(this)).AddEmployeeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        EmployeeWindowsForms.CronusReference.FindEmployeeResponse EmployeeWindowsForms.CronusReference.CronusServiceSoap.FindEmployee(EmployeeWindowsForms.CronusReference.FindEmployeeRequest request) {
+        EmployeeWindowsForms.CronusReference1.FindEmployeeResponse EmployeeWindowsForms.CronusReference1.CronusServiceSoap.FindEmployee(EmployeeWindowsForms.CronusReference1.FindEmployeeRequest request) {
             return base.Channel.FindEmployee(request);
         }
         
-        public EmployeeWindowsForms.CronusReference.CRONUS_Sverige_AB_Employee FindEmployee(string No_) {
-            EmployeeWindowsForms.CronusReference.FindEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference.FindEmployeeRequest();
-            inValue.Body = new EmployeeWindowsForms.CronusReference.FindEmployeeRequestBody();
-            inValue.Body.No_ = No_;
-            EmployeeWindowsForms.CronusReference.FindEmployeeResponse retVal = ((EmployeeWindowsForms.CronusReference.CronusServiceSoap)(this)).FindEmployee(inValue);
+        public EmployeeWindowsForms.CronusReference1.CRONUS_Sverige_AB_Employee FindEmployee(string no) {
+            EmployeeWindowsForms.CronusReference1.FindEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference1.FindEmployeeRequest();
+            inValue.Body = new EmployeeWindowsForms.CronusReference1.FindEmployeeRequestBody();
+            inValue.Body.no = no;
+            EmployeeWindowsForms.CronusReference1.FindEmployeeResponse retVal = ((EmployeeWindowsForms.CronusReference1.CronusServiceSoap)(this)).FindEmployee(inValue);
             return retVal.Body.FindEmployeeResult;
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.FindEmployeeResponse> EmployeeWindowsForms.CronusReference.CronusServiceSoap.FindEmployeeAsync(EmployeeWindowsForms.CronusReference.FindEmployeeRequest request) {
+        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.FindEmployeeResponse> EmployeeWindowsForms.CronusReference1.CronusServiceSoap.FindEmployeeAsync(EmployeeWindowsForms.CronusReference1.FindEmployeeRequest request) {
             return base.Channel.FindEmployeeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.FindEmployeeResponse> FindEmployeeAsync(string No_) {
-            EmployeeWindowsForms.CronusReference.FindEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference.FindEmployeeRequest();
-            inValue.Body = new EmployeeWindowsForms.CronusReference.FindEmployeeRequestBody();
-            inValue.Body.No_ = No_;
-            return ((EmployeeWindowsForms.CronusReference.CronusServiceSoap)(this)).FindEmployeeAsync(inValue);
+        public System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.FindEmployeeResponse> FindEmployeeAsync(string no) {
+            EmployeeWindowsForms.CronusReference1.FindEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference1.FindEmployeeRequest();
+            inValue.Body = new EmployeeWindowsForms.CronusReference1.FindEmployeeRequestBody();
+            inValue.Body.no = no;
+            return ((EmployeeWindowsForms.CronusReference1.CronusServiceSoap)(this)).FindEmployeeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        EmployeeWindowsForms.CronusReference.UpdateEmployeeResponse EmployeeWindowsForms.CronusReference.CronusServiceSoap.UpdateEmployee(EmployeeWindowsForms.CronusReference.UpdateEmployeeRequest request) {
+        EmployeeWindowsForms.CronusReference1.UpdateEmployeeResponse EmployeeWindowsForms.CronusReference1.CronusServiceSoap.UpdateEmployee(EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequest request) {
             return base.Channel.UpdateEmployee(request);
         }
         
-        public void UpdateEmployee(string No_, string First_Name, string Last_Name, string Job_Title, string Address) {
-            EmployeeWindowsForms.CronusReference.UpdateEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference.UpdateEmployeeRequest();
-            inValue.Body = new EmployeeWindowsForms.CronusReference.UpdateEmployeeRequestBody();
-            inValue.Body.No_ = No_;
-            inValue.Body.First_Name = First_Name;
-            inValue.Body.Last_Name = Last_Name;
-            inValue.Body.Job_Title = Job_Title;
-            inValue.Body.Address = Address;
-            EmployeeWindowsForms.CronusReference.UpdateEmployeeResponse retVal = ((EmployeeWindowsForms.CronusReference.CronusServiceSoap)(this)).UpdateEmployee(inValue);
+        public void UpdateEmployee(string no, string firstName, string lastName, string jobTitle, string address) {
+            EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequest();
+            inValue.Body = new EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequestBody();
+            inValue.Body.no = no;
+            inValue.Body.firstName = firstName;
+            inValue.Body.lastName = lastName;
+            inValue.Body.jobTitle = jobTitle;
+            inValue.Body.address = address;
+            EmployeeWindowsForms.CronusReference1.UpdateEmployeeResponse retVal = ((EmployeeWindowsForms.CronusReference1.CronusServiceSoap)(this)).UpdateEmployee(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.UpdateEmployeeResponse> EmployeeWindowsForms.CronusReference.CronusServiceSoap.UpdateEmployeeAsync(EmployeeWindowsForms.CronusReference.UpdateEmployeeRequest request) {
+        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.UpdateEmployeeResponse> EmployeeWindowsForms.CronusReference1.CronusServiceSoap.UpdateEmployeeAsync(EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequest request) {
             return base.Channel.UpdateEmployeeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.UpdateEmployeeResponse> UpdateEmployeeAsync(string No_, string First_Name, string Last_Name, string Job_Title, string Address) {
-            EmployeeWindowsForms.CronusReference.UpdateEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference.UpdateEmployeeRequest();
-            inValue.Body = new EmployeeWindowsForms.CronusReference.UpdateEmployeeRequestBody();
-            inValue.Body.No_ = No_;
-            inValue.Body.First_Name = First_Name;
-            inValue.Body.Last_Name = Last_Name;
-            inValue.Body.Job_Title = Job_Title;
-            inValue.Body.Address = Address;
-            return ((EmployeeWindowsForms.CronusReference.CronusServiceSoap)(this)).UpdateEmployeeAsync(inValue);
+        public System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.UpdateEmployeeResponse> UpdateEmployeeAsync(string no, string firstName, string lastName, string jobTitle, string address) {
+            EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequest();
+            inValue.Body = new EmployeeWindowsForms.CronusReference1.UpdateEmployeeRequestBody();
+            inValue.Body.no = no;
+            inValue.Body.firstName = firstName;
+            inValue.Body.lastName = lastName;
+            inValue.Body.jobTitle = jobTitle;
+            inValue.Body.address = address;
+            return ((EmployeeWindowsForms.CronusReference1.CronusServiceSoap)(this)).UpdateEmployeeAsync(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        EmployeeWindowsForms.CronusReference.DeleteEmployeeResponse EmployeeWindowsForms.CronusReference.CronusServiceSoap.DeleteEmployee(EmployeeWindowsForms.CronusReference.DeleteEmployeeRequest request) {
+        EmployeeWindowsForms.CronusReference1.DeleteEmployeeResponse EmployeeWindowsForms.CronusReference1.CronusServiceSoap.DeleteEmployee(EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequest request) {
             return base.Channel.DeleteEmployee(request);
         }
         
-        public void DeleteEmployee(string No_) {
-            EmployeeWindowsForms.CronusReference.DeleteEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference.DeleteEmployeeRequest();
-            inValue.Body = new EmployeeWindowsForms.CronusReference.DeleteEmployeeRequestBody();
-            inValue.Body.No_ = No_;
-            EmployeeWindowsForms.CronusReference.DeleteEmployeeResponse retVal = ((EmployeeWindowsForms.CronusReference.CronusServiceSoap)(this)).DeleteEmployee(inValue);
+        public void DeleteEmployee(string no) {
+            EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequest();
+            inValue.Body = new EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequestBody();
+            inValue.Body.no = no;
+            EmployeeWindowsForms.CronusReference1.DeleteEmployeeResponse retVal = ((EmployeeWindowsForms.CronusReference1.CronusServiceSoap)(this)).DeleteEmployee(inValue);
         }
         
         [System.ComponentModel.EditorBrowsableAttribute(System.ComponentModel.EditorBrowsableState.Advanced)]
-        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.DeleteEmployeeResponse> EmployeeWindowsForms.CronusReference.CronusServiceSoap.DeleteEmployeeAsync(EmployeeWindowsForms.CronusReference.DeleteEmployeeRequest request) {
+        System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.DeleteEmployeeResponse> EmployeeWindowsForms.CronusReference1.CronusServiceSoap.DeleteEmployeeAsync(EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequest request) {
             return base.Channel.DeleteEmployeeAsync(request);
         }
         
-        public System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference.DeleteEmployeeResponse> DeleteEmployeeAsync(string No_) {
-            EmployeeWindowsForms.CronusReference.DeleteEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference.DeleteEmployeeRequest();
-            inValue.Body = new EmployeeWindowsForms.CronusReference.DeleteEmployeeRequestBody();
-            inValue.Body.No_ = No_;
-            return ((EmployeeWindowsForms.CronusReference.CronusServiceSoap)(this)).DeleteEmployeeAsync(inValue);
+        public System.Threading.Tasks.Task<EmployeeWindowsForms.CronusReference1.DeleteEmployeeResponse> DeleteEmployeeAsync(string no) {
+            EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequest inValue = new EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequest();
+            inValue.Body = new EmployeeWindowsForms.CronusReference1.DeleteEmployeeRequestBody();
+            inValue.Body.no = no;
+            return ((EmployeeWindowsForms.CronusReference1.CronusServiceSoap)(this)).DeleteEmployeeAsync(inValue);
         }
     }
 }

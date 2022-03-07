@@ -50,28 +50,28 @@ public class CronusServiceSoapProxy implements org.tempuri.CronusServiceSoap {
     return cronusServiceSoap.getEmployees();
   }
   
-  public void addEmployee(java.lang.String no_, java.lang.String first_Name, java.lang.String last_Name, java.lang.String job_Title, java.lang.String address) throws java.rmi.RemoteException{
+  public void addEmployee(java.lang.String no, java.lang.String firstName, java.lang.String lastName, java.lang.String jobTitle, java.lang.String address) throws java.rmi.RemoteException{
     if (cronusServiceSoap == null)
       _initCronusServiceSoapProxy();
-    cronusServiceSoap.addEmployee(no_, first_Name, last_Name, job_Title, address);
+    cronusServiceSoap.addEmployee(no, firstName, lastName, jobTitle, address);
   }
   
-  public org.tempuri.CRONUS_Sverige_AB_Employee findEmployee(java.lang.String no_) throws java.rmi.RemoteException{
+  public org.tempuri.CRONUS_Sverige_AB_Employee findEmployee(java.lang.String no) throws java.rmi.RemoteException{
     if (cronusServiceSoap == null)
       _initCronusServiceSoapProxy();
-    return cronusServiceSoap.findEmployee(no_);
+    return cronusServiceSoap.findEmployee(no);
   }
   
-  public void updateEmployee(java.lang.String no_, java.lang.String first_Name, java.lang.String last_Name, java.lang.String job_Title, java.lang.String address) throws java.rmi.RemoteException{
+  public void updateEmployee(java.lang.String no, java.lang.String firstName, java.lang.String lastName, java.lang.String jobTitle, java.lang.String address) throws java.rmi.RemoteException{
     if (cronusServiceSoap == null)
       _initCronusServiceSoapProxy();
-    cronusServiceSoap.updateEmployee(no_, first_Name, last_Name, job_Title, address);
+    cronusServiceSoap.updateEmployee(no, firstName, lastName, jobTitle, address);
   }
   
-  public void deleteEmployee(java.lang.String no_) throws java.rmi.RemoteException{
+  public void deleteEmployee(java.lang.String no) throws java.rmi.RemoteException{
     if (cronusServiceSoap == null)
       _initCronusServiceSoapProxy();
-    cronusServiceSoap.deleteEmployee(no_);
+    cronusServiceSoap.deleteEmployee(no);
   }
   
   
