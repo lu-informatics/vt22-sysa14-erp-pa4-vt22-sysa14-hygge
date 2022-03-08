@@ -60,19 +60,28 @@ public class Controller {
 					employeeFrame.getEmployeeTableModel().addEmployee(tmpEmployee); // Add employee shows in the table
 					employeeFrame.clearTextFields(); // Clear the text fields after the action event
 				} catch (RemoteException e1) { // An error message
-					employeeFrame.displayErrorMessage(
-						"Error Occured. Please make sure that all fields are filled in and that No is unique. \n" + 
-						"Please also note the character limits of the text fields: \n" +
-						"No: 1-20 characters \n" +
-						"First Name: max 30 characters \n" +
-						"Last Name: max 30 characters \n" +
-						"Job Title: max 30 characters \n" +
-						"Address: max 50 characters \n"
-					);
-				}
-			}
-		});
-
+					if(e1.getMessage().contains("PRIMARY KEY")) {
+						
+						employeeFrame.displayErrorMessage( 
+							"Error Occured. Please make sure the the Employee No's are unique.");
+					}
+					else {
+						employeeFrame.displayErrorMessage(
+								"Error Occured. Please make sure that all fields are filled in and that No is unique. \n" + 
+								"Please also note the character limits of the text fields: \n" +
+								"No: 1-20 characters \n" +
+								"First Name: max 30 characters \n" +
+								"Last Name: max 30 characters \n" +
+								"Job Title: max 30 characters \n" +
+								"Address: max 50 characters \n" );
+						
+						}
+					}
+				}	
+			});
+					
+						
+			
 		// btnDelete
 		employeeFrame.getBtnDelete().addActionListener(new ActionListener() { // Add actionsListener
 			public void actionPerformed(ActionEvent e) {
