@@ -50,7 +50,14 @@ namespace EmployeeWindowsForms
             }
             catch (Exception e1) 
             { 
-                MessageBox.Show("Error Occured. Message: " + e1.Message);
+                if (e1.Message.Contains("PRIMARY KEY"))
+                {
+                    MessageBox.Show("Error Occured. Please make sure the the Employee No's are unique.");
+                }
+                else
+                {
+                    MessageBox.Show("Error Occured. Message: " + e1.Message);
+                }
             }
         }
 
